@@ -18,11 +18,8 @@ public class MainActivity extends Activity {
     }
 
     public void tellJoke(View view) {
-        JokesTask jokesTask = new JokesTask(this);
+        JokesTask jokesTask = new JokesTask();
         jokesTask.execute();
-
-
-
 
 
          /*
