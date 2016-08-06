@@ -1,13 +1,8 @@
 package com.udacity.gradle.builditbigger;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-
-import com.udacity.gradle.joke.JokeActivity;
-import com.udacity.gradle.jokes.JokeTeller;
-
 
 public class MainActivity extends Activity {
 
@@ -19,8 +14,7 @@ public class MainActivity extends Activity {
 
     public void tellJoke(View view) {
         JokesTask jokesTask = new JokesTask();
-        jokesTask.execute();
-
+        jokesTask.execute(this);
 
          /*
         STEP 1: Make the button display a toast showing a joke retrieved from your Java joke telling
