@@ -3,7 +3,6 @@ package com.udacity.gradle.builditbigger;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.util.Pair;
 import com.example.heleneshaikh.myapplication.backend.jokesAPI.JokesAPI;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
@@ -24,9 +23,6 @@ public class JokesTask extends AsyncTask<Context, Void, String> {
         if(myApiService == null) {  // Only do this once
             JokesAPI.Builder builder = new JokesAPI.Builder(AndroidHttp.newCompatibleTransport(),
                     new AndroidJsonFactory(), null)
-                    // options for running against local devappserver
-                    // - 10.0.2.2 is localhost's IP address in Android emulator
-                    // - turn off compression when running against local devappserver
                     .setRootUrl("http://10.0.2.2:8080/_ah/api/")
                     .setGoogleClientRequestInitializer(new GoogleClientRequestInitializer() {
                         @Override
@@ -41,7 +37,7 @@ public class JokesTask extends AsyncTask<Context, Void, String> {
         context = params[0];
 
         try {
-            return myApiService.tellJoke().execute().getData();
+            return myApiService.tellJoke().execute().getData(); //check that this returns a non-empty string
         } catch (IOException e) {
             return e.getMessage();
         }
