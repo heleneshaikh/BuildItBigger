@@ -3,6 +3,9 @@ package com.udacity.gradle.builditbigger;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
+
+import com.udacity.gradle.jokes.JokeTeller;
 
 public class MainActivity extends Activity {
 
@@ -16,10 +19,13 @@ public class MainActivity extends Activity {
         JokesTask jokesTask = new JokesTask();
         jokesTask.execute(this);
 
+        JokeTeller jokeTeller = new JokeTeller();
+        Toast.makeText(this, jokeTeller.tellJoke(), Toast.LENGTH_SHORT).show();
+
          /*
         STEP 1: Make the button display a toast showing a joke retrieved from your Java joke telling
         library.
-        Toast.makeText(this, jokeTeller.tellJoke(), Toast.LENGTH_SHORT).show();
+
         */
 
         /*
@@ -27,7 +33,7 @@ public class MainActivity extends Activity {
         it as an intent extra. Wire up project dependencies so that the button can now pass the joke
         from the Java Library to the Android Library.
 
-        JokeTeller jokeTeller = new JokeTeller();
+
         Intent intent = new Intent(MainActivity.this, JokeActivity.class);
         intent.putExtra(JokeActivity.JOKE, jokeTeller.tellJoke());
         startActivity(intent);
