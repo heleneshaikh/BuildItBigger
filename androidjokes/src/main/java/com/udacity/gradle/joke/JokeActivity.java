@@ -1,16 +1,9 @@
 package com.udacity.gradle.joke;
 
 import android.app.Activity;
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.TextView;
-import android.widget.Toast;
-
 import com.hfad.androidjokes.R;
-
 import org.greenrobot.eventbus.EventBus;
-import org.greenrobot.eventbus.Subscribe;
 
 public class JokeActivity extends Activity {
 //    public static final String JOKE = "Joke";

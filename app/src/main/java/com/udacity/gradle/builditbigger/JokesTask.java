@@ -3,7 +3,6 @@ package com.udacity.gradle.builditbigger;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
-
 import com.example.heleneshaikh.myapplication.backend.jokesAPI.JokesAPI;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
@@ -44,6 +43,7 @@ public class JokesTask extends AsyncTask<Context, Void, String> {
 
         String joke;
         try {
+
             joke = myApiService.tellJoke().execute().getData();
             EventBus.getDefault().post(new JokeEvent(joke));
             return joke; //check that this returns a non-empty string
