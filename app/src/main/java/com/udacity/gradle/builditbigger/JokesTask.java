@@ -17,6 +17,10 @@ public class JokesTask extends AsyncTask<Context, Void, String> {
     private static JokesAPI myApiService = null;
     private Context context;
 
+//    public JokesTask(Context context) {
+//        this.context = context;
+//    }
+
     @Override
     protected String doInBackground(Context... params) {
         if (myApiService == null) {  // Only do this once
