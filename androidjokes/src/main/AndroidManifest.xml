@@ -8,7 +8,7 @@
         android:supportsRtl="true">
         <activity android:name=".JokeActivity" />
         <activity android:name="com.udacity.gradle.jokes.JokeActivity"></activity>
-        <activity android:name="com.udacity.gradle.joke.JokeActivity"></activity>
+        <activity android:name="com.udacity.gradle.builditbigger.JokeActivity"></activity>
     </application>
 
 </manifest>
