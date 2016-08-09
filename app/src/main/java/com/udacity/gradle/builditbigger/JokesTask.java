@@ -17,6 +17,10 @@ public class JokesTask extends AsyncTask<Context, Void, String> {
     private static JokesAPI myApiService = null;
     private Context context;
 
+//    public JokesTask(Context context) {
+//        this.context = context;
+//    }
+
     @Override
     protected String doInBackground(Context... params) {
         if (myApiService == null) {  // Only do this once
@@ -33,7 +37,7 @@ public class JokesTask extends AsyncTask<Context, Void, String> {
             myApiService = builder.build();
         }
 
-        if (params != null) {
+        if (params != null || params.length > 0 ) {
             context = params[0];
         }
 
