@@ -18,7 +18,7 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name=".paid.MainActivity"
+            android:name="com.udacity.gradle.builditbigger.free.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -7,6 +7,9 @@ import android.support.test.filters.LargeTest;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.test.RenamingDelegatingContext;
+
+import com.udacity.gradle.builditbigger.free.MainActivity;
+
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
